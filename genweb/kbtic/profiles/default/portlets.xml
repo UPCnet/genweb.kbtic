@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<portlets
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="plone">
+
+  <portlet
+      addview="navegacioEtiquetes"
+      title="Etiquetes KBTIC-RIN"
+      description="Etiquetes KBTIC-RIN" />
+
+  <portlet
+      addview="navegacioEtiquetesHOME"
+      title="Etiquetes HOME"
+      description="Etiquetes HOME" />
+
+</portlets>
