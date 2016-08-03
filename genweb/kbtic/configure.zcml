@@ -10,6 +10,7 @@
     i18n_domain="genweb.kbtic">
 
     <!-- Include configuration for dependencies listed in setup.py -->
+    <five:registerPackage package="." initialize=".initialize" />
     <includeDependencies package="." />
 
     <!-- Include sub-packages that use their own configure.zcml files. -->
@@ -19,8 +20,11 @@
     <!-- Register all components defined with grok -->
     <grok:grok package="." />
 
+<!--     <i18n:registerTranslations directory="locales" />     -->
+
     <!-- Templates overriden -->
     <include package="z3c.jbot" file="meta.zcml" />
+
 
     <!-- Register the installation GenericSetup extension profile -->
     <genericsetup:registerProfile

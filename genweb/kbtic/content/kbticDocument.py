@@ -4,6 +4,7 @@ from five import grok
 from genweb.kbtic import _
 from plone.directives import form
 from plone.app.textfield import RichText
+from plone.directives import dexterity
 from zope import schema
 
 
@@ -28,3 +29,9 @@ class IKbticDocument(form.Schema):
 class View(grok.View):
     grok.context(IKbticDocument)
     grok.template('kbtic_view')
+
+
+class Edit(dexterity.EditForm):
+    """A standard edit form.
+    """
+    grok.context(IKbticDocument)
