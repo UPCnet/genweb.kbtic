@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0"  encoding='utf-8'?>
 
 <portlets
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
@@ -7,11 +7,13 @@
   <portlet
       addview="navegacioEtiquetes"
       title="Etiquetes KBTIC-RIN"
-      description="Etiquetes KBTIC-RIN" />
+      description="Etiquetes KBTIC-RIN"
+      remove="true" />
 
   <portlet
       addview="navegacioEtiquetesHOME"
       title="Etiquetes HOME"
-      description="Etiquetes HOME" />
+      description="Etiquetes HOME"
+      remove="true" />
 
 </portlets>

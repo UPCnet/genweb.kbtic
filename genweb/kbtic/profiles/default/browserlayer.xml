@@ -1,7 +1,6 @@
-<?xml version="1.0"?>
 <layers>
   <layer
     name="genweb.kbtic"
-    interface="genweb.kbtic.interfaces.IGenwebKbticLayer"
+    interface="genweb.kbtic.interface.IGenwebKbticLayer"
   />
 </layers>
