@@ -5,6 +5,7 @@ from plone.app.portlets.portlets import base
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone import PloneMessageFactory as _
+from zope.formlib import form
 
 
 class IEtiquetesHOMEPortlet(IPortletDataProvider):
@@ -20,7 +21,7 @@ class Assignment(base.Assignment):
 
 class Renderer(base.Renderer):
     """ Overrides static.pt in the rendering of the portlet. """
-    render = ViewPageTemplateFile('etiquetesHOME.pt')
+    render = ViewPageTemplateFile('templates/etiquetesHOME.pt')
 
     def mostrarEtiquetes(self):
         """ Etiquetes del sistema
@@ -51,7 +52,18 @@ class Renderer(base.Renderer):
         return idxs
 
 
-class AddForm(base.NullAddForm):
+class AddForm(base.AddForm):
+    form_fields = form.Fields(IEtiquetesHOMEPortlet)
+    label = _(u"Afegeix portlet de etiquetes kbtic a la home")
+    description = _(u"Aquest portlet mostra les etiquetes del site")
 
-    def create(self):
-        return Assignment()
+    def create(self, data):
+        # s'invoca despres de __init__ en clicar Desa
+        assignment = Assignment(**data)
+        return assignment
+
+
+class EditForm(base.EditForm):
+    form_fields = form.Fields(IEtiquetesHOMEPortlet)
+    label = _(u"Edita portlet de etiquetes kbtic a la home")
+    description = _(u"Aquest portlet edita les etiquetes del site")
