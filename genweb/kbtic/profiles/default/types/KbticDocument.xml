@@ -33,6 +33,7 @@
   <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer" />
   <element value="plone.app.relationfield.behavior.IRelatedItems"/>
   <element value="plone.app.referenceablebehavior.referenceable.IReferenceable"/>
+  <element value="plone.app.multilingual.dx.interfaces.IDexterityTranslatable" />
  </property>
  <property
     name="schema">genweb.kbtic.content.kbticDocument.IKbticDocument</property>
