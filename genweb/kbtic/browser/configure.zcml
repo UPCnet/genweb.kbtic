@@ -19,4 +19,11 @@
         directory="scripts"
         />
 
+    <browser:page
+        for="*"
+        name="listing_kbtic_docs"
+        class=".views.ListingKbticDocs"
+        permission="zope2.Public"
+        />
+
 </configure>

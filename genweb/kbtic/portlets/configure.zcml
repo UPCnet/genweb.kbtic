@@ -3,21 +3,12 @@
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="genweb.portlets">
+    i18n_domain="genweb.kbtic">
 
   <include package="plone.app.portlets" />
 
-  	 <plone:portlet
-         name="navegacioEtiquetes"
-         interface=".etiquetes.IEtiquetesPortlet"
-         assignment=".etiquetes.Assignment"
-         renderer=".etiquetes.Renderer"
-         addview=".etiquetes.AddForm"
-         editview=".etiquetes.EditForm"
-         />
-
      <plone:portlet
-         name="navegacioEtiquetesHOME"
+         name="genweb.kbtic.portlets.etiquetesHOME"
          interface=".etiquetesHOME.IEtiquetesHOMEPortlet"
          assignment=".etiquetesHOME.Assignment"
          renderer=".etiquetesHOME.Renderer"

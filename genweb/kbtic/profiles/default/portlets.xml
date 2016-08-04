@@ -4,16 +4,12 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     i18n:domain="plone">
 
-  <portlet
-      addview="navegacioEtiquetes"
-      title="Etiquetes KBTIC-RIN"
-      description="Etiquetes KBTIC-RIN"
-      remove="true" />
+  <portlet addview="genweb.kbtic.portlets.etiquetesHOME" remove="True" />
 
-  <portlet
-      addview="navegacioEtiquetesHOME"
-      title="Etiquetes HOME"
-      description="Etiquetes HOME"
-      remove="true" />
+  <portlet addview="genweb.kbtic.portlets.etiquetesHOME"
+           title="Etiquetes KBTIC HOME"
+           description="Etiquetes KBTIC HOME">
+
+  </portlet>
 
 </portlets>
