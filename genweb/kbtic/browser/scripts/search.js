@@ -153,7 +153,9 @@ $("a.searchRedirect").on("click", function (event) {
     event.stopImmediatePropagation();
     var category = $(this).attr("value");
     var host = $(location).attr('host');
-    $(location).attr('href','http://'+host+'/kbtic/ca/kbtic-rin/?cat='+category);
+    var pathname = $(location).attr('pathname');
+    var root_path = 'http://' + host + pathname;
+    $(location).attr('href',root_path+'/kbtic-rin/?cat='+category);
 });
 
 

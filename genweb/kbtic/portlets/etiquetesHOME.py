@@ -6,6 +6,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone import PloneMessageFactory as _
 from zope.formlib import form
+from plone import api
 
 
 class IEtiquetesHOMEPortlet(IPortletDataProvider):
@@ -50,6 +51,17 @@ class Renderer(base.Renderer):
                 i.id not in IGNORE_INDEXES]
         idxs.sort()
         return idxs
+
+
+    def getTagClass(self):
+        """Gets the location and puts the class to be able to do searchs"""
+        tag_class = "CatItem"
+        portal_path = '/'.join(api.portal.get().getPhysicalPath()) +'/ca/benvingut'
+        path = "/".join(self.context.getPhysicalPath())
+        if portal_path == path:
+            tag_class = "searchRedirect"
+
+        return tag_class
 
 
 class AddForm(base.AddForm):
