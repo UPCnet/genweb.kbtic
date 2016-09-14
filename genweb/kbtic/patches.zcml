@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:monkey="http://namespaces.plone.org/monkey"
+    i18n_domain="genweb">
+
+    <include package="collective.monkeypatcher" />
+
+    <monkey:patch
+        description="Make the query filtering by pages"
+        class="plone.app.portlets.portlets.navigation.Renderer"
+        original="getNavTree"
+        replacement=".patches.getNavTree"
+        />
+
+</configure>
