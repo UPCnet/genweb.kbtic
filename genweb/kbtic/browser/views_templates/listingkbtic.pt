@@ -43,7 +43,7 @@
       <h3 i18n:translate="search_tags">Cercar per etiquetes</h3>
       <p>Fa la cerca a documents NO OBSOLETS</p>
       <div class="searchbytagcontainer" >
-          <input id="searchbytag"
+          <input id="searchbytagkbtic"
                  class="searchInput"
                  type="hidden"
                  placeholder="Etiqueta (tot en minúscules)"
@@ -51,7 +51,7 @@
       </div>
       <h3>Cercar per continguts</h3>
       <p>Fa la cerca a documents NO OBSOLETS</p>
-      <div id="searchinputcontent">
+      <div id="searchinputcontentkbtic">
         <div class="input-append">
           <input id="searchInput" class="searchInput" type="text" placeholder="Contingut"
                  style="width:350px; height: 26px;"
