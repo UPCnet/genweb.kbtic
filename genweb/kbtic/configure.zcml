@@ -17,6 +17,7 @@
     <include package=".browser" />
     <include package=".portlets" />
     <include file="patches.zcml" />
+    <include file="subscribers.zcml" />
 
     <!-- Register all components defined with grok -->
     <grok:grok package="." />

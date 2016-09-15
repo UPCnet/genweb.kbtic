@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="genweb">
+
+    <!-- Added Event Subscriber -->
+    <subscriber
+        handler=".hooks.Added"
+        for=".content.kbticDocument.IKbticDocument
+             zope.app.container.interfaces.IObjectAddedEvent"
+        />
+
+    <!-- Modified Event Subscriber -->
+    <subscriber
+        handler=".hooks.Modified"
+        for=".content.kbticDocument.IKbticDocument
+             zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+        />
+
+</configure>
