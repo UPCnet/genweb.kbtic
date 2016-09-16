@@ -13,6 +13,7 @@ def getNavTree(self, _marker=None):
     context = aq_inner(self.context)
     queryBuilder = getMultiAdapter((context, self.data), INavigationQueryBuilder)
     queryBuilder.query['portal_type'] = ['Folder']
+    #queryBuilder.query['portal_type'].remove('KbticDocument')
     strategy = getMultiAdapter((context, self.data), INavtreeStrategy)
 
     return buildFolderTree(context, obj=context, query=queryBuilder(), strategy=strategy)
