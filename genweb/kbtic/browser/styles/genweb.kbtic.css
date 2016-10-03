@@ -84,7 +84,11 @@ li.llistats {
 
 .portaltype-kbticdocument #menu {
 	display: none;
-} 
+}
+
+#menu > li{
+  list-style: none;
+}
 
 .caixa_llistats {
     margin-top:  10px;

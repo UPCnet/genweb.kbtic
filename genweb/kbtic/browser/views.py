@@ -149,4 +149,7 @@ class ListingKbticDocs(grok.View):
 class SearchFilteredContentAjax(ListingKbticDocs):
     """ Ajax helper for filtered content search view for every folder. """
     grok.context(Interface)
-    grok.name('search_filtered_content')
+    grok.name('search_filtered_content_ajax')
+    grok.template("searchfilteredcontentajax")
+    grok.require('zope2.View')
+    grok.layer(IGenwebKbticLayer)
