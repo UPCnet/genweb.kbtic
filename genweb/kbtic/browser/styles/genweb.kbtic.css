@@ -82,13 +82,14 @@ li.llistats {
 	margin-bottom: 10px;
 }
 
+.portaltype-kbticdocument #menu {
+	display: none;
+} 
+
 .caixa_llistats {
     margin-top:  10px;
     margin-bottom:  10px;
 }
-
-#menu { margin-left: 10px;}
-
 
 a.internal-link-tofile:after {
 content: " ("attr(title)")";
@@ -586,7 +587,7 @@ fieldset[disabled] .btn-link:focus {
   visibility: hidden;
 }
 
-.template-foldernotesview #content dl {
+.template-listingkbtic #content dl {
 background: #F7F7F7;
 border-color: #b2b2b2 #d9d9d9 #d9d9d9;
 border-radius: 3px;
@@ -595,7 +596,7 @@ border-width: 1px;
 padding: 10px 10px 0 10px;
 }
 
-.template-foldernotesview #content dl dt {
+.template-listingkbtic #content dl dt {
   padding-left: 10px;
   font-weight: normal;
   background-repeat: no-repeat !important;
@@ -645,5 +646,5 @@ section#tagslist {
   _padding:10px;
 }
 
-.template-notes_view .toHide,
+.template-listingkbtic .toHide,
 .template-atct_edit .toHide {display:none;}
