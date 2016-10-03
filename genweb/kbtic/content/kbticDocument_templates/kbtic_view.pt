@@ -38,7 +38,7 @@
             </a><span class="separator" tal:condition="not: repeat/category/end">,</span>
         </span>
       </div>
-       <div tal:replace="structure context/body" />
+       <div tal:replace="structure context/body/output" />
 
     </metal:fill>
 
