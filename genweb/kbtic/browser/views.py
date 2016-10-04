@@ -14,7 +14,6 @@ class ListingKbticDocs(grok.View):
     grok.require('zope2.View')
     grok.layer(IGenwebKbticLayer)
 
-
     def update(self):
         self.query = self.request.form.get('q', '')
         self.obsolete = self.request.form.get('o', '')
@@ -90,8 +89,6 @@ class ListingKbticDocs(grok.View):
                                              Subject={'query': self.tags, 'operator': 'and'},
                                              obsolete=False
                                              )
-
-
 
             return r_results
 

@@ -82,14 +82,13 @@ li.llistats {
 	margin-bottom: 10px;
 }
 
-.portaltype-kbticdocument #menu {
-	display: none;
+#accordion > li{
+    list-style: none;
 }
 
-#menu > li{
-  list-style: none;
+#accordion{
+    margin-left: auto;
 }
-
 .caixa_llistats {
     margin-top:  10px;
     margin-bottom:  10px;
@@ -179,10 +178,6 @@ li.llistats {
     padding-bottom: 4px;
     padding-left: 7px;
 }
-
-
-
-
 
 .btn {
   display: inline-block;
@@ -652,3 +647,12 @@ section#tagslist {
 
 .template-listingkbtic .toHide,
 .template-atct_edit .toHide {display:none;}
+
+
+body[class*="subsection"] #accordion{
+    display: none;
+}
+
+a.collapsed .icon-chevron-down{
+    background-position: -456px -72px;
+}

@@ -3,10 +3,6 @@
 
   <javascript authenticated="False" cacheable="True" compression="safe"
     conditionalcomment="" cookable="True" enabled="True" expression=""
-    id="++resource++genweb_kbtic_scripts/etiquetes.slider.js" inline="False"/>
-
-  <javascript authenticated="False" cacheable="True" compression="safe"
-    conditionalcomment="" cookable="True" enabled="True" expression=""
     id="++resource++genweb_kbtic_scripts/search.js" inline="False"/>
 
 </object>

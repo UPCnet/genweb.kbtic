@@ -1,20 +1,22 @@
 <tal:portletCategorias i18n:domain="genweb.kbtic">
-<ul id="menu">
-<li tal:define="res view/mostrarEtiquetes" tal:condition="res" class="categories">
-	<a href="#">
-		<img src="++resource++genweb_kbtic_images/collapse.gif">
-		LLISTA D'ETIQUETES
-	</a>
-	<ul class="caixa_llistats_home">
-		<li tal:repeat="res view/mostrarEtiquetes" class="llistats">
-			<a href="#"
-				 tal:attributes= "class view/getTagClass;
-				 									name res;
-				                  value res"
-				 tal:content="res">
-			</a>
-		</li>
-	</ul>
-</li>
+<ul class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <li class="panel panel-default categories" tal:define="res view/mostrarEtiquetes" tal:condition="res">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					<i class="icon-chevron-down"></i>
+          LLISTA D'ETIQUETES
+        </a>
+      </h4>
+    </div>
+    <ul id="collapseTwo" class="panel-collapse collapse caixa_llistats_home" role="tabpanel" aria-labelledby="headingTwo">
+			<li tal:repeat="res view/mostrarEtiquetes" class="panel-body llistats">
+				<a href="#"
+					 tal:attributes= "class view/getTagClass; name res; value res"
+					 tal:content="res">
+				</a>
+      </li>
+    </ul>
+  </li>
 </ul>
 </tal:portletCategorias>
