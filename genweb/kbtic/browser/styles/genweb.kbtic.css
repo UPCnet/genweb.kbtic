@@ -82,13 +82,6 @@ li.llistats {
 	margin-bottom: 10px;
 }
 
-#accordion > li{
-    list-style: none;
-}
-
-#accordion{
-    margin-left: auto;
-}
 .caixa_llistats {
     margin-top:  10px;
     margin-bottom:  10px;
@@ -648,11 +641,18 @@ section#tagslist {
 .template-listingkbtic .toHide,
 .template-atct_edit .toHide {display:none;}
 
+#accordion > li #headingTwo > li {
+    list-style: none;
+}
 
-body[class*="subsection"] #accordion{
+#accordion #headingTwo {
+    margin-left: auto;
+}
+
+body[class*="subsection"] #accordion {
     display: none;
 }
 
-a.collapsed .icon-chevron-down{
+a.collapsed .icon-chevron-down {
     background-position: -456px -72px;
 }
