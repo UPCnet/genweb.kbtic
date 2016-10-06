@@ -12,4 +12,10 @@
 
   </portlet>
 
+  <portlet addview="genweb.kbtic.portlets.navigation" remove="True" />
+
+  <portlet addview="genweb.kbtic.portlets.navigation"
+           title="Menu de Navegacio per Carpetes"
+           description="Navegacio per Carpetes"/>
+
 </portlets>

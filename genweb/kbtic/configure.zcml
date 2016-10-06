@@ -16,7 +16,6 @@
     <!-- Include sub-packages that use their own configure.zcml files. -->
     <include package=".browser" />
     <include package=".portlets" />
-    <include file="patches.zcml" />
     <include file="subscribers.zcml" />
 
     <!-- Register all components defined with grok -->

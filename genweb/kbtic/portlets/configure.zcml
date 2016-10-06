@@ -16,4 +16,16 @@
          editview=".etiquetesHOME.EditForm"
          />
 
+     <plone:portlet
+         name="genweb.kbtic.portlets.navigation"
+         interface=".navigation.INavigationPortletFolder"
+         assignment=".navigation.Assignment"
+         renderer=".navigation.Renderer"
+         addview=".navigation.AddForm"
+         editview=".navigation.EditForm"
+         />
+
+     <adapter factory=".navigation.QueryBuilder" />
+     <adapter factory=".navigation.NavtreeStrategy" />
+
 </configure>
