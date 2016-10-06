@@ -641,11 +641,11 @@ section#tagslist {
 .template-listingkbtic .toHide,
 .template-atct_edit .toHide {display:none;}
 
-#accordion > li #headingTwo > li {
+#accordion > li {
     list-style: none;
 }
 
-#accordion #headingTwo {
+#accordion {
     margin-left: auto;
 }
 
