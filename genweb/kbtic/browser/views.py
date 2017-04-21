@@ -58,23 +58,23 @@ class ListingKbticDocs(grok.View):
 
             if self.tags:
                 if not self.obsolete == '':
-                    r_results = pc.searchResults(path={'query': path, 'depth': 1},
+                    r_results = pc.searchResults(path={'query': path},
                                                  SearchableText=query,
                                                  Subject={'query': self.tags, 'operator': 'and'},
                                                  )
                 else:
-                    r_results = pc.searchResults(path={'query': path, 'depth': 1},
+                    r_results = pc.searchResults(path={'query': path},
                                                  SearchableText=query,
                                                  Subject={'query': self.tags, 'operator': 'and'},
                                                  obsolete=False
                                                  )
             else:
                 if not self.obsolete == '':
-                    r_results = pc.searchResults(path={'query': path, 'depth': 1},
+                    r_results = pc.searchResults(path={'query': path},
                                                  SearchableText=query
                                                  )
                 else:
-                    r_results = pc.searchResults(path={'query': path, 'depth': 1},
+                    r_results = pc.searchResults(path={'query': path},
                                                  SearchableText=query,
                                                  obsolete=False
                                                  )
@@ -82,10 +82,10 @@ class ListingKbticDocs(grok.View):
             return r_results
         else:
             if not self.obsolete == '':
-                r_results = pc.searchResults(path={'query': path, 'depth': 1},
+                r_results = pc.searchResults(path={'query': path},
                                              Subject={'query': self.tags, 'operator': 'and'})
             else:
-                r_results = pc.searchResults(path={'query': path, 'depth': 1},
+                r_results = pc.searchResults(path={'query': path},
                                              Subject={'query': self.tags, 'operator': 'and'},
                                              obsolete=False
                                              )
@@ -114,7 +114,7 @@ class ListingKbticDocs(grok.View):
             query = quote_bad_chars(query)
             path = self.context.absolute_url_path()
 
-            r_results = pc.searchResults(path={'query': path, 'depth': 1},
+            r_results = pc.searchResults(path={'query': path},
                                          Subject=query)
 
             return r_results
@@ -130,12 +130,12 @@ class ListingKbticDocs(grok.View):
         path = self.context.getPhysicalPath()
         path = "/".join(path)
         if self.obsolete == '1':
-            items = catalog.searchResults(path={'query': path, 'depth': 1},
+            items = catalog.searchResults(path={'query': path},
                                           sort_on='modified',
                                           sort_order='reverse',
                                           obsolete=True,)
         else:
-            items = catalog.searchResults(path={'query': path, 'depth': 1},
+            items = catalog.searchResults(path={'query': path},
                                           sort_on='modified',
                                           sort_order='reverse',
                                           obsolete=False,)
