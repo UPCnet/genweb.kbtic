@@ -58,23 +58,23 @@ class ListingKbticDocs(grok.View):
 
             if self.tags:
                 if not self.obsolete == '':
-                    r_results = pc.searchResults(path={'query': path, 'depth': 2},
+                    r_results = pc.searchResults(path={'query': path},
                                                  SearchableText=query,
                                                  Subject={'query': self.tags, 'operator': 'and'},
                                                  )
                 else:
-                    r_results = pc.searchResults(path={'query': path, 'depth': 2},
+                    r_results = pc.searchResults(path={'query': path},
                                                  SearchableText=query,
                                                  Subject={'query': self.tags, 'operator': 'and'},
                                                  obsolete=False
                                                  )
             else:
                 if not self.obsolete == '':
-                    r_results = pc.searchResults(path={'query': path, 'depth': 2},
+                    r_results = pc.searchResults(path={'query': path},
                                                  SearchableText=query
                                                  )
                 else:
-                    r_results = pc.searchResults(path={'query': path, 'depth': 2},
+                    r_results = pc.searchResults(path={'query': path},
                                                  SearchableText=query,
                                                  obsolete=False
                                                  )
@@ -82,10 +82,10 @@ class ListingKbticDocs(grok.View):
             return r_results
         else:
             if not self.obsolete == '':
-                r_results = pc.searchResults(path={'query': path, 'depth': 2},
+                r_results = pc.searchResults(path={'query': path},
                                              Subject={'query': self.tags, 'operator': 'and'})
             else:
-                r_results = pc.searchResults(path={'query': path, 'depth': 2},
+                r_results = pc.searchResults(path={'query': path},
                                              Subject={'query': self.tags, 'operator': 'and'},
                                              obsolete=False
                                              )
