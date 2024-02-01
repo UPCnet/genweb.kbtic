@@ -4,6 +4,32 @@ from Products.CMFCore.utils import getToolByName
 from zope.interface import Interface
 from plone.batching import Batch
 from genweb.kbtic.interface import IGenwebKbticLayer
+from Products.Five.browser import BrowserView
+from datetime import datetime
+from DateTime import DateTime
+
+
+class MakeObsolets(BrowserView):
+
+    def __call__(self):
+        portal = api.portal.get()
+        catalog = getToolByName(portal, 'portal_catalog')
+        end = DateTime('2016/12/31 23:59:59')
+
+        date_range_query = { 'query':end, 'range': 'max'}
+
+        items = catalog.queryCatalog(
+            {"portal_type":"KbticDocument",
+             "modified" : date_range_query,
+             "sort_order":"reverse"
+        })
+
+        for i in items:
+            obj = i.getObject()
+            print(obj)
+            obj.obsolete = True
+            obj.reindexObject()
+        return "ok"
 
 
 class ListingKbticDocs(grok.View):
